@@ -1,135 +1,86 @@
-# Thesis Template
+# AMR Thesis Manuscript
 
-A Typst-based thesis template for undergraduate/graduate research papers.
+**Machine Learning-Based Antimicrobial Resistance Pattern Recognition in Environmental Bacterial Isolates from the Philippines**
+
+A Typst-based thesis manuscript for antimicrobial resistance (AMR) pattern analysis using unsupervised machine learning techniques.
 
 ## 📁 Project Structure
 
 ```
-thesis_template/
+amr-thesis-project-manuscript/
 ├── main.typ                    # Entry point - compile this file
+├── main.pdf                    # Compiled thesis document
 ├── template.typ                # Document styling and formatting
-├── references.bib              # Bibliography in BibTeX format
+├── references.bib              # Bibliography (~200+ citations)
 ├── chapters/
 │   ├── 00-front-matter/        # Title page, abstract, TOC, etc.
-│   │   ├── title-page.typ
-│   │   ├── approval-sheet.typ
-│   │   ├── acknowledgement.typ
-│   │   ├── dedication.typ
-│   │   ├── abstract.typ
-│   │   ├── table-of-contents.typ
-│   │   ├── list-of-figures.typ
-│   │   └── list-of-tables.typ
-│   ├── 01-introduction/
-│   │   ├── _index.typ
-│   │   ├── background.typ
-│   │   ├── statement-of-problem.typ
-│   │   ├── objectives.typ
-│   │   ├── significance.typ
-│   │   └── scope-limitations.typ
-│   ├── 02-literature-review/
-│   │   ├── _index.typ
-│   │   ├── related-studies.typ
-│   │   └── research-gap.typ
-│   ├── 03-methodology/
-│   │   ├── _index.typ
-│   │   ├── research-design.typ
-│   │   ├── conceptual-framework.typ
-│   │   ├── system-architecture.typ
-│   │   ├── data-collection.typ
-│   │   ├── implementation.typ
-│   │   └── evaluation.typ
-│   ├── 04-results-discussion/
-│   │   ├── _index.typ
-│   │   ├── implementation-results.typ
-│   │   └── discussion.typ
-│   └── 05-conclusion/
-│       └── _index.typ
+│   ├── 01-introduction/        # Background, objectives, significance
+│   ├── 02-literature-review/   # Related studies and concepts
+│   ├── 03-theoretical-framework/  # Primary foundations, conceptual framework
+│   ├── 04-methodology/         # Research design, phases 1-5
+│   ├── 05-architectural-framework/  # System architecture, layers, deployment
+│   ├── 06-results-discussion/  # Clustering results, validation, discussion
+│   └── 07-conclusion/          # Conclusions, recommendations, future work
 ├── appendices/
-│   ├── _index.typ
 │   ├── appendix-a.typ
 │   └── appendix-b.typ
 └── figures/
-    ├── mermaid/                # Mermaid source files (.mmd)
-    ├── rendered/               # Rendered diagrams (.png)
+    ├── mermaid/                # Mermaid source files
+    ├── rendered/               # Rendered diagrams
     └── screenshots/            # System screenshots
 ```
 
-## 🚀 Quick Start
+## 🔬 Research Overview
 
-1. **Install Typst**: Download from [typst.app](https://typst.app) or use:
+This thesis investigates antimicrobial resistance patterns in 491 bacterial isolates collected from environmental sources across three Philippine regions:
+
+- **BARMM** (Bangsamoro Autonomous Region in Muslim Mindanao)
+- **Region III** (Central Luzon)
+- **Region VIII** (Eastern Visayas)
+
+### Key Features
+
+- **Hierarchical Clustering** with Ward's linkage method
+- **PCA** for dimensionality reduction (59.7% variance explained)
+- **4 distinct resistance clusters** identified (k=4)
+- **Silhouette score**: 0.3412
+- **Random Forest validation**: 95.9% accuracy
+
+## 🚀 Compilation
+
+1. **Install Typst**:
+
    ```bash
    winget install --id Typst.Typst
    ```
 
-2. **Update Metadata**: Edit `main.typ` with your thesis information:
-   ```typst
-   #show: thesis.with(
-     title: [Your Thesis Title],
-     author: "Your Name",
-     ...
-   )
-   ```
+2. **Compile the thesis**:
 
-3. **Add Content**: Fill in the placeholder files in `chapters/`
-
-4. **Add Figures**: Place images in `figures/` folder
-
-5. **Add References**: Update `references.bib` with your citations
-
-6. **Compile**:
    ```bash
    typst compile main.typ
    ```
 
-## 📝 Usage Tips
+3. **Watch for changes**:
+   ```bash
+   typst watch main.typ
+   ```
 
-### Citations
-Use `@key` syntax to cite references:
-```typst
-According to @smith2024, machine learning...
-```
+## 📊 Related Repository
 
-### Figures
-```typst
-#figure(
-  image("figures/diagram.png", width: 80%),
-  caption: [Figure caption here],
-)<fig-label>
-```
+The computational analysis code is available at:
 
-### Tables
-```typst
-#figure(
-  table(
-    columns: (1fr, 1fr),
-    [Column 1], [Column 2],
-    [Data], [Data],
-  ),
-  caption: [Table caption here],
-)<tbl-label>
-```
+- [amr-thesis-project-main](https://github.com/queshue134-eng/amr-thesis-project-main)
 
-### Mermaid Diagrams
-1. Create `.mmd` file in `figures/mermaid/`
-2. Render to PNG using mermaid.ink or mermaid-cli
-3. Reference in Typst: `image("figures/rendered/diagram.png")`
+## 📖 Citation Format
 
-## 📋 Checklist
+Uses BibTeX format with 200+ academic references covering:
 
-- [ ] Title page filled
-- [ ] Approval sheet updated
-- [ ] Acknowledgement written
-- [ ] Abstract completed
-- [ ] All chapters filled
-- [ ] References added
-- [ ] Figures included
-- [ ] Table of contents updated
-- [ ] List of figures/tables updated
-- [ ] Appendices added
-- [ ] Final review completed
+- Antimicrobial resistance surveillance
+- Machine learning in healthcare
+- Clustering methodologies
+- Philippine AMR studies
 
-## 📖 Resources
+## 👥 Authors
 
-- [Typst Documentation](https://typst.app/docs)
-- [Typst Universe (Packages)](https://typst.app/universe)
-- [Mermaid Diagrams](https://mermaid.js.org)
+- Thesis Author: Quesh
+- Academic Year: 2025-2026
