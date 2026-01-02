@@ -1,0 +1,11 @@
+// 1.1 Background of the Study
+
+== Background of the Study
+
+Antimicrobial resistance (AMR) represents one of the most pressing global health challenges of the 21st century. The World Health Organization has declared AMR among the top ten threats to global health, with an estimated 1.27 million deaths directly attributable to bacterial AMR in 2019 alone @who2025glass. Without coordinated intervention, AMR-related mortality is projected to reach 10 million deaths annually by 2050, surpassing cancer as a leading cause of death worldwide.
+
+The Philippines, as a rapidly developing archipelagic nation with extensive aquaculture industries and diverse healthcare systems, faces unique challenges in AMR surveillance and control. The country's position within the Indo-Pacific region—a recognized hotspot for emerging infectious diseases—places it at elevated risk for resistance dissemination across human, animal, and environmental interfaces @ng2025philippines. The Antimicrobial Resistance Surveillance Program (ARSP), established in 1988, has documented concerning trends including rising carbapenem-resistant Enterobacteriaceae and extended-spectrum β-lactamase (ESBL)-producing organisms in clinical settings @arsp2024.
+
+Recent advances in machine learning (ML) offer promising opportunities to enhance AMR surveillance capabilities. Data-driven approaches including clustering algorithms, random forest classifiers, and neural networks have demonstrated utility in identifying resistance patterns, predicting phenotypes from genotypes, and stratifying patient risk @sakagianni2024datadriven @parthasarathi2024mlstrategy. However, application of these methods to environmental and aquaculture-derived isolates remains limited, particularly in resource-constrained settings where phenotypic data predominate over genomic information.
+
+The Integrated One Health Approach to AMR Containment (INOHAC) AMR Project Two, implemented across three Philippine regions—BARMM, Central Luzon, and Eastern Visayas—provides a unique dataset spanning the water-fish-human nexus @abamo2024inohac. This One Health framework recognizes that AMR emergence and transmission occur at the intersection of human health, animal husbandry, and environmental contamination, requiring integrated surveillance strategies @franklin2024onehealth.
