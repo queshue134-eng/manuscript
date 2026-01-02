@@ -79,8 +79,3 @@ Uses BibTeX format with 200+ academic references covering:
 - Machine learning in healthcare
 - Clustering methodologies
 - Philippine AMR studies
-
-## 👥 Authors
-
-- Thesis Author: Quesh
-- Academic Year: 2025-2026
