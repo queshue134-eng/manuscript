@@ -21,7 +21,7 @@ Based on the findings of this study, the following recommendations are proposed 
 
 1. *Adopt Phenotypic Clustering*: The validated clustering methodology provides a reproducible approach for stratifying resistance phenotypes that can be integrated into routine national AMR surveillance programs @arsp2024.
 
-2. *Leverage Machine Learning*: The demonstrated \> 95% validation accuracy supports the deployment of supervised classifiers for automated resistance phenotype prediction in clinical microbiology laboratories.
+2. *Leverage Machine Learning*: The demonstrated 92% validation accuracy supports the deployment of supervised classifiers for automated resistance phenotype prediction in clinical microbiology laboratories.
 
 3. *Standardize Data Collection*: Consistent AST panel coverage across regions would enhance clustering precision and enable more robust temporal trend analysis.
 

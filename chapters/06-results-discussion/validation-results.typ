@@ -47,4 +47,4 @@ The internal validity of the clustering solution was evaluated using complementa
 
 === Supervised Validation
 
-The supervised validation approach—training a Random Forest classifier to predict cluster membership from resistance features—achieved high classification performance (accuracy \> 95%, cross-validated) @ardila2025rfsystematic. This confirms that cluster assignments are predictable from resistance data, reinforcing the validity of the phenotype definitions.
+The supervised validation approach—training a Random Forest classifier to predict cluster membership from resistance features—achieved high classification performance (accuracy = 92%, cross-validated) @ardila2025rfsystematic. This confirms that cluster assignments are predictable from resistance data, reinforcing the validity of the phenotype definitions.

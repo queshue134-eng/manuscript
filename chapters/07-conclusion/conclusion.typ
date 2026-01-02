@@ -17,7 +17,7 @@ Hierarchical agglomerative clustering using Ward's linkage method and Euclidean 
 
 === Objective 2: Cluster Validation
 
-The four-cluster solution achieved a silhouette score of 0.466, indicating moderate cluster structure appropriate for complex biological phenotypes. Supervised validation using Random Forest classification achieved \> 95% cross-validated accuracy, confirming that cluster assignments represent reproducible, learnable patterns rather than algorithmic artifacts @ardila2025rfsystematic.
+The four-cluster solution achieved a silhouette score of 0.466, indicating moderate cluster structure appropriate for complex biological phenotypes. Supervised validation using Random Forest classification achieved 92% cross-validated accuracy, confirming that cluster assignments represent reproducible, learnable patterns rather than algorithmic artifacts @ardila2025rfsystematic.
 
 === Objective 3: Spatial and Environmental Patterns
 

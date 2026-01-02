@@ -10,10 +10,10 @@ Co-resistance relationships between antibiotic pairs were quantified using Phi c
     columns: 3,
     table.header[*Antibiotic Pair*][*Phi Coefficient*][*p-value*],
     [Doxycycline -- Tetracycline], [0.806], [$<$ 0.001],
-    [Ampicillin -- Amoxicillin-Clavulanate], [0.621], [$<$ 0.001],
-    [Ciprofloxacin -- Levofloxacin], [0.584], [$<$ 0.001],
-    [Gentamicin -- Amikacin], [0.473], [$<$ 0.001],
-    [Ampicillin -- Ceftriaxone], [0.398], [$<$ 0.001],
+    [Chloramphenicol -- Trimethoprim-Sulfamethoxazole], [0.621], [$<$ 0.001],
+    [Doxycycline -- Trimethoprim-Sulfamethoxazole], [0.559], [$<$ 0.001],
+    [Trimethoprim-Sulfamethoxazole -- Tetracycline], [0.470], [$<$ 0.001],
+    [Cefoxitin -- Ceftiofur], [0.454], [$<$ 0.001],
   ),
   caption: [Top Significant Co-resistance Pairs],
 ) <tab:coresistance-pairs>
@@ -27,7 +27,6 @@ Network analysis revealed hub antibiotics with high connectivity, indicating the
 Key findings from the network topology:
 - *Ampicillin* exhibited the highest degree centrality, connecting to 8 other resistance phenotypes
 - Fluoroquinolone resistance (ciprofloxacin, levofloxacin) formed a tightly connected subnetwork
-- Carbapenem-aminoglycoside co-resistance was observed in 15.3% of MDR isolates
 
 === Clinical Implications
 

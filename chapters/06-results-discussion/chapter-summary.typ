@@ -19,6 +19,6 @@ This chapter presented the results of the pattern recognition analysis on antimi
 
 6. *Regional Patterns*: BARMM exhibited highest concentration of MDR Cluster 3 isolates (66 of 123, 53.7%), warranting targeted surveillance
 
-7. *Validation*: Random Forest classification achieved \> 95% accuracy, confirming cluster stability and reproducibility
+7. *Validation*: Random Forest classification achieved 92% accuracy, confirming cluster stability and reproducibility
 
 These findings support the utility of hybrid unsupervised-supervised machine learning frameworks for AMR surveillance and phenotype stratification in the Philippine water-fish-human nexus context @franklin2024onehealth.
