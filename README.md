@@ -41,10 +41,10 @@ This thesis investigates antimicrobial resistance patterns in 491 bacterial isol
 ### Key Features
 
 - **Hierarchical Clustering** with Ward's linkage method
-- **PCA** for dimensionality reduction (59.7% variance explained)
+- **PCA** for dimensionality reduction (61.2% variance explained with 4 components)
 - **4 distinct resistance clusters** identified (k=4)
-- **Silhouette score**: 0.3412
-- **Random Forest validation**: 95.9% accuracy
+- **Silhouette score**: 0.466
+- **Random Forest validation**: 92% accuracy
 
 ## 🚀 Compilation
 
