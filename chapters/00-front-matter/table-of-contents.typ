@@ -7,10 +7,24 @@
 
   #set par(first-line-indent: 0pt)
 
+  // Custom outline entry formatting for chapters (level 1) - black text
+  #show outline.entry.where(level: 1): it => {
+    v(0.3em)
+    text(fill: black)[
+      #link(it.element.location())[
+        #text(fill: black)[
+          #strong[Chapter #counter(heading).at(it.element.location()).first(): #it.element.body]
+          #box(width: 1fr, it.fill)
+          #it.page()
+        ]
+      ]
+    ]
+  }
+
   // Auto-generated outline with clickable links
   #outline(
     title: none,
     indent: auto,
-    depth: 2,
+    depth: 3,
   )
 ]

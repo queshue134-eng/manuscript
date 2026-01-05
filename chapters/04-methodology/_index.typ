@@ -1,8 +1,7 @@
 // Chapter 4: Methodology
 // This file aggregates all sections of the Methodology chapter
 
-= CHAPTER IV \
-METHODOLOGY
+= Methodology
 
 #include "research-design.typ"
 #include "data-source.typ"

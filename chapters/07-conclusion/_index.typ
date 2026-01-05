@@ -1,8 +1,7 @@
 // Chapter 7: Conclusion and Recommendation
 // This file aggregates all sections of the Conclusion chapter
 
-= CHAPTER VII \
-CONCLUSION AND RECOMMENDATION
+= Conclusion and Recommendation
 
 #include "conclusion.typ"
 #include "recommendations.typ"

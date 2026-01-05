@@ -3,28 +3,72 @@
 
 == Synthesis: The Methodological Gap
 
-The foregoing review reveals a critical methodological gap at the intersection of computational approaches and environmental AMR surveillance:
+The foregoing review reveals a critical methodological gap at the intersection of computational approaches and environmental AMR surveillance.
 
-=== Limitations of Existing Approaches
+=== Comparative Summary of Related Studies
 
-+ *Supervised approaches* achieve high accuracy but remain constrained to known phenotypes. Models trained on clinical datasets cannot identify novel resistance patterns absent from their training data, fundamentally limiting their utility for environmental discovery.
+#figure(
+  table(
+    columns: (1.2fr, 2fr, 0.5fr, 0.8fr, 0.8fr, 1.2fr, 1.2fr),
+    align: (left, left, center, center, center, left, left),
+    stroke: 0.5pt,
+    inset: 5pt,
 
-+ *Existing unsupervised methods* have rarely been applied to multi-regional environmental surveillance. While hierarchical clustering has proven effective in agricultural and clinical settings, its systematic application to One Health surveillance datasets spanning water-fish-human interfaces remains underexplored.
+    // Header row
+    table.cell(fill: luma(230))[*Author*],
+    table.cell(fill: luma(230))[*Title*],
+    table.cell(fill: luma(230))[*Year*],
+    table.cell(fill: luma(230))[*Unsup.*],
+    table.cell(fill: luma(230))[*Sup.*],
+    table.cell(fill: luma(230))[*Focus*],
+    table.cell(fill: luma(230))[*Contribution*],
 
-+ *Spatial epidemiology* typically operates on aggregated resistance metrics rather than integrated phenotypic profiles. Studies documenting spatial autocorrelation in resistance rates have not combined these insights with data-driven phenotype discovery.
+    // Data rows
+    [Nguyen et al.], [ML for Predicting Antimicrobial MICs], [2018], [No], [Yes], [Genomic AMR], [Salmonella MICs],
+    [Ardila et al.], [Systematic Review of ML in AMR], [2025], [No], [Yes], [Systematic review], [RF/GBDT],
+    [Parthasarathi et al.],
+    [Clustering-Based AMR Gene Analysis],
+    [2024],
+    [Yes],
+    [Yes],
+    [AMR gene clustering],
+    [Silhouette 0.82],
+    [Kou et al.],
+    [Spatial Epidemiology of E. coli],
+    [2025],
+    [No],
+    [No],
+    [Spatial epidemiology],
+    [Spatial autocorrelation],
+    [Abada et al.],
+    [Ward's Clustering for Agricultural MDR],
+    [2025],
+    [Yes],
+    [No],
+    [Agricultural MDR],
+    [Ward's clustering],
+    [Abamo et al.],
+    [INOHAC AMR Project Two],
+    [2024],
+    [No],
+    [No],
+    [Environmental surveillance],
+    [Multi-regional dataset],
 
-+ *Philippine surveillance* has characterized environmental resistance through conventional MDR classification without exploring underlying phenotypic structure. The INOHAC dataset's potential for pattern discovery remains unrealized through traditional analytical approaches.
+    // Current study row (highlighted)
+    table.cell(fill: rgb("#d4edda"))[*Current Study*],
+    table.cell(fill: rgb("#d4edda"))[*Pattern Recognition of AMR*],
+    table.cell(fill: rgb("#d4edda"))[*2024*],
+    table.cell(fill: rgb("#d4edda"))[*Yes*],
+    table.cell(fill: rgb("#d4edda"))[*Yes*],
+    table.cell(fill: rgb("#d4edda"))[*Water-fish-human nexus*],
+    table.cell(fill: rgb("#d4edda"))[*Hierarchical + RF*],
+  ),
+  caption: [Comparative Summary of Computational Approaches to AMR Analysis],
+)
 
-=== The Present Study's Contribution
+_The current study uniquely integrates unsupervised pattern discovery with supervised validation for multi-regional environmental surveillance._
 
-The present study addresses these gaps through a hybrid unsupervised-supervised framework specifically designed for environmental AMR surveillance:
+*Limitations of Existing Approaches.* Supervised methods achieve high accuracy but cannot identify novel resistance patterns absent from training data. Unsupervised clustering, while effective in agricultural and clinical settings, has rarely been applied to multi-regional One Health surveillance. Spatial epidemiology operates on aggregated metrics rather than phenotypic profiles. Philippine surveillance has relied on conventional MDR classification, leaving the INOHAC dataset's pattern discovery potential unrealized.
 
-*Unsupervised Pattern Discovery.* By first clustering isolates using Ward's hierarchical method with Euclidean distance, the approach discovers resistance archetypes directly from phenotypic data without requiring predefined labels. This enables identification of novel resistance patterns that conventional clinical categories might overlook.
-
-*Supervised Validation.* By subsequently training a Random Forest classifier on cluster assignments and evaluating discrimination accuracy through cross-validation, the framework tests whether discovered clusters represent biologically coherent structures rather than statistical artifacts. High classification accuracy combined with high silhouette scores provides convergent evidence for phenotypic validity.
-
-*Multi-Regional Environmental Focus.* Applying this methodology to isolates spanning multiple Philippine regions and ecological compartments (water, fish, human sources) enables characterization of resistance phenotypes specific to the One Health nexus—patterns potentially distinct from those documented in purely clinical surveillance.
-
-*Integrated Interpretation.* Combining cluster validation with MAR index analysis and MDR classification bridges data-driven discovery with clinically interpretable resistance metrics, facilitating translation of computational findings into actionable surveillance insights.
-
-This integrated approach represents a methodological advance over both purely supervised prediction (which requires known labels) and purely unsupervised clustering (which lacks validation mechanisms), offering a reproducible framework for future environmental AMR surveillance studies.
+*The Present Study's Contribution.* This study addresses these gaps through a hybrid unsupervised-supervised framework for environmental AMR surveillance. Ward's hierarchical clustering discovers resistance archetypes without predefined labels, while Random Forest classification validates whether clusters represent biologically coherent structures. Applying this methodology to isolates spanning multiple Philippine regions and ecological compartments (water, fish, human) enables characterization of resistance phenotypes specific to the One Health nexus. This integrated approach advances beyond purely supervised prediction or unsupervised clustering alone, offering a reproducible framework for future surveillance studies.

@@ -66,13 +66,26 @@
     }
   }
 
-  // Heading styles
-  set heading(numbering: none)
+  // Heading styles - custom numbering that includes "Chapter" for level 1
+  set heading(numbering: (..nums) => {
+    let n = nums.pos()
+    if n.len() == 1 {
+      "Chapter " + str(n.at(0)) + ":"
+    } else if n.len() == 2 {
+      str(n.at(0)) + "." + str(n.at(1)) + "."
+    } else if n.len() >= 3 {
+      n.map(str).join(".") + "."
+    }
+  })
 
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
     v(0.4in)
-    align(center, text(weight: "bold", size: 14pt, upper(it.body)))
+    align(center)[
+      #text(weight: "bold", size: 14pt)[CHAPTER #counter(heading).display("1")]
+      #v(0.1in)
+      #text(weight: "bold", size: 14pt)[#upper(it.body)]
+    ]
     v(0.2in)
   }
 
@@ -81,21 +94,21 @@
   show heading.where(level: 2): it => {
     v(0.3in)
     block(breakable: false, below: 2em)[
-      #text(weight: "bold", size: 12pt, it.body)
+      #text(weight: "bold", size: 12pt)[#it]
     ]
   }
 
   show heading.where(level: 3): it => {
     block(breakable: false, below: 1.5em)[
       #v(0.12in)
-      #text(weight: "bold", size: 12pt, style: "italic", it.body)
+      #text(weight: "bold", size: 12pt, style: "italic")[#it]
     ]
   }
 
   show heading.where(level: 4): it => {
     block(breakable: false, below: 1em)[
       #v(0.1in)
-      #text(weight: "bold", size: 12pt, it.body)
+      #text(weight: "bold", size: 12pt)[#it]
     ]
   }
 
@@ -104,6 +117,18 @@
 
   // Keep figures and tables together with their captions
   show figure: set block(breakable: false)
+
+  // Table captions: above the table, left-aligned, keep together
+  show figure.where(kind: table): set figure.caption(position: top)
+  show figure.where(kind: table): set figure(placement: none)
+  show figure.where(kind: table): it => {
+    block(breakable: false)[
+      #align(left)[
+        #it.caption
+        #it.body
+      ]
+    ]
+  }
 
   // Table styling
   set table(

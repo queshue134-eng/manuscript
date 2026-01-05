@@ -1,8 +1,7 @@
 // Chapter 3: Theoretical Framework
 // This file aggregates all sections of the Theoretical Framework chapter
 
-= CHAPTER III \
-THEORETICAL FRAMEWORK
+= Theoretical Framework
 
 #include "introduction.typ"
 #include "primary-foundations.typ"

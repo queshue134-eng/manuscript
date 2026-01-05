@@ -1,8 +1,7 @@
 // Chapter 5: Architectural Design
 // This file aggregates all sections of the Architectural Design chapter
 
-= CHAPTER V \
-ARCHITECTURAL DESIGN
+= Architectural Design
 
 #include "introduction.typ"
 #include "design-goals.typ"

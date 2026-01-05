@@ -1,8 +1,7 @@
 // Chapter 6: Results and Discussion
 // This file aggregates all sections of the Results and Discussion chapter
 
-= CHAPTER VI \
-RESULTS AND DISCUSSION
+= Results and Discussion
 
 #include "introduction.typ"
 #include "clustering-results.typ"

@@ -22,7 +22,7 @@ The first two principal components capture 39.92% of the total variance, which i
 
 === Internal Validation Metrics
 
-The internal validity of the clustering solution was evaluated using complementary metrics:
+The internal validity of the clustering solution was evaluated using complementary metrics @ikotun2022kmeans:
 
 #figure(
   table(
@@ -38,7 +38,7 @@ The internal validity of the clustering solution was evaluated using complementa
     [9], [0.575], [723.79], [209.78], [1.023],
     [10], [0.586], [657.01], [210.44], [1.013],
   ),
-  caption: [Internal validation metrics for cluster counts k = 2 to k = 10. Selection was performed within k = 2 to k = 8 @ikotun2022kmeans.],
+  caption: [Internal validation metrics for cluster counts k = 2 to k = 10. Selection was performed within k = 2 to k = 8.],
 ) <tab:validation-metrics>
 
 *Silhouette Coefficient:* At k=4, the Silhouette Coefficient is 0.466, indicating moderate cluster structure. According to interpretation guidelines proposed by Rousseeuw, scores between 0.26 and 0.50 indicate structure that requires careful interpretation @shahapure2020silhouette. However, when applied to complex biological phenotypes with overlapping characteristics, expected silhouette scores are typically lower than those observed in synthetic datasets.

@@ -4,18 +4,17 @@
 
 Supervised learning models were used solely to validate the discriminative capacity of the discovered resistance patterns. This phase implements leakage-safe train–test splitting, macro-averaged evaluation metrics, confusion matrix analysis, feature importance extraction, and cross-seed stability checks.
 
-=== Classification Tasks
+=== Classification Task
 
-Two supervised classification tasks were designed to assess whether resistance patterns align with known biological categories:
+Supervised classification was designed to validate the unsupervised clustering results by assessing whether the discovered clusters represent discriminable resistance phenotypes:
 
 #figure(
   table(
     columns: 3,
     table.header[*Task*][*Target Variable*][*Purpose*],
-    [Species Discrimination], [Bacterial species], [Assess if resistance fingerprints distinguish species],
-    [MDR Classification], [MDR status (0/1)], [Validate resistance-MDR relationship],
+    [Cluster Discrimination], [Cluster assignment], [Validate that clusters represent discriminable phenotypes],
   ),
-  caption: [Supervised Classification Tasks],
+  caption: [Supervised Classification Task],
 ) <tab:supervised-classification-tasks>
 
 === Leakage-Safe Data Splitting
@@ -128,17 +127,17 @@ To justify the train–test split configuration, a sensitivity analysis was cond
   table(
     columns: 5,
     table.header[*Split*][*Model*][*F1 Score*][*Accuracy*][*Stability (std)*],
-    [70/30], [Logistic Regression], [0.923 ± 0.026], [0.965], [0.026],
-    [70/30], [Random Forest], [0.944 ± 0.016], [0.974], [0.016],
-    [70/30], [KNN], [0.917 ± 0.034], [0.964], [0.034],
-    [80/20], [Logistic Regression], [0.952 ± 0.031], [0.978], [0.031],
-    [80/20], [Random Forest], [0.973 ± 0.022], [0.988], [0.022],
-    [80/20], [KNN], [0.956 ± 0.028], [0.980], [0.028],
-    [90/10], [Logistic Regression], [0.983 ± 0.020], [0.992], [0.021],
-    [90/10], [Random Forest], [0.991 ± 0.018], [0.996], [0.018],
-    [90/10], [KNN], [0.958 ± 0.026], [0.980], [0.026],
+    [70/30], [Logistic Regression], [0.984 ± 0.006], [0.985], [0.006],
+    [70/30], [Random Forest], [0.984 ± 0.014], [0.993], [0.014],
+    [70/30], [KNN], [0.979 ± 0.010], [0.977], [0.010],
+    [80/20], [Logistic Regression], [0.987 ± 0.005], [0.986], [0.005],
+    [80/20], [Random Forest], [0.982 ± 0.022], [0.994], [0.022],
+    [80/20], [KNN], [0.984 ± 0.012], [0.982], [0.012],
+    [90/10], [Logistic Regression], [0.992 ± 0.010], [0.992], [0.010],
+    [90/10], [Random Forest], [0.960 ± 0.050], [0.988], [0.050],
+    [90/10], [KNN], [0.989 ± 0.010], [0.988], [0.010],
   ),
-  caption: [F1 Scores Across Different Train–Test Split Ratios (MDR Classification)],
+  caption: [F1 Scores Across Different Train–Test Split Ratios (Cluster Discrimination)],
 ) <tab:split-ratio-comparison>
 
 ==== Cross-Validation Comparison
@@ -147,12 +146,12 @@ To justify the train–test split configuration, a sensitivity analysis was cond
   table(
     columns: 5,
     table.header[*CV Folds*][*Model*][*F1 Score*][*Accuracy*][*Stability (std)*],
-    [5-fold], [Logistic Regression], [0.953 ± 0.009], [0.978], [0.009],
-    [5-fold], [Random Forest], [0.947 ± 0.025], [0.976], [0.025],
-    [5-fold], [KNN], [0.933 ± 0.038], [0.970], [0.038],
-    [10-fold], [Logistic Regression], [0.932 ± 0.045], [0.970], [0.045],
-    [10-fold], [Random Forest], [0.955 ± 0.035], [0.980], [0.035],
-    [10-fold], [KNN], [0.952 ± 0.037], [0.978], [0.037],
+    [5-fold], [Logistic Regression], [0.989 ± 0.009], [0.990], [0.009],
+    [5-fold], [Random Forest], [0.989 ± 0.011], [0.994], [0.011],
+    [5-fold], [KNN], [0.979 ± 0.009], [0.978], [0.009],
+    [10-fold], [Logistic Regression], [0.989 ± 0.015], [0.990], [0.015],
+    [10-fold], [Random Forest], [0.986 ± 0.027], [0.994], [0.027],
+    [10-fold], [KNN], [0.982 ± 0.015], [0.982], [0.015],
   ),
   caption: [F1 Scores Across Different Cross-Validation Configurations],
 ) <tab:cv-comparison>
@@ -161,15 +160,17 @@ To justify the train–test split configuration, a sensitivity analysis was cond
 
 The sensitivity analysis revealed the following key insights:
 
-1. *Consistent high performance*: All split configurations achieved F1 scores above 0.91, indicating that supervised validation results are robust to partitioning choices.
+1. *Consistently high performance across all models*: All three classifiers achieved F1 scores above 0.96 and accuracy above 0.97 across all configurations. This indicates that the discovered clusters are highly discriminable and represent well-separated resistance phenotypes.
 
-2. *Acceptable stability*: Standard deviations ranged from 0.009 to 0.045, all within acceptable bounds (< 0.05), confirming that results are not artifacts of random initialization.
+2. *High stability*: Standard deviations remained consistently low (0.005–0.027 for most configurations, with one outlier at 0.050 for 90/10 Random Forest), confirming that the high discriminative capacity is not an artifact of random initialization.
 
-3. *80/20 split justification*: While 90/10 achieved marginally higher scores, the smaller test set (≈49 samples) reduces statistical reliability of performance estimates. The 80/20 split balances training data adequacy with reliable test evaluation.
+3. *80/20 split justification*: The 80/20 split achieved strong performance (F1 = 0.982–0.987) while providing a statistically reliable test set (≈98 samples), balancing training adequacy with evaluation reliability.
 
-4. *5-fold CV preference*: 5-fold cross-validation produced more stable results (lower standard deviation) compared to 10-fold, particularly for Logistic Regression (0.009 vs 0.045).
+4. *Cross-validation equivalence*: 5-fold and 10-fold cross-validation produced nearly identical results (F1 ≈ 0.98–0.99). Given the computational efficiency of 5-fold CV, it was preferred.
 
-These findings support the use of the *80/20 train–test split with 5-fold cross-validation* as the standard configuration for supervised validation in this study.
+5. *Random Forest as primary validator*: While all three classifiers achieved comparable performance (F1 = 0.98–0.99), Random Forest was selected as the primary validation model due to its interpretable feature importance through Gini impurity, which enables identification of antibiotics most associated with cluster membership.
+
+These findings support the use of the *80/20 train–test split with Random Forest and 5-fold cross-validation* as the standard configuration for supervised validation. The consistently high F1 scores (>0.96) across all models confirm that the unsupervised clustering produced *biologically meaningful, well-separated resistance phenotypes* that can be reliably discriminated by supervised classifiers.
 
 === Phase 3 Output Summary
 

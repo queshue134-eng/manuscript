@@ -2,8 +2,7 @@
 // CHAPTER I: INTRODUCTION
 // =============================================================================
 
-= CHAPTER I \
-INTRODUCTION
+= Introduction
 
 #include "background.typ"
 #include "statement-of-problem.typ"

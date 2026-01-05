@@ -3,7 +3,7 @@
 
 This chapter presents the empirical findings of the antimicrobial resistance pattern recognition analysis conducted on 491 bacterial isolates collected from the water-fish-human nexus across three Philippine regions: BARMM (Bangsamoro Autonomous Region in Muslim Mindanao), Region III (Central Luzon), and Region VIII (Eastern Visayas).
 
-The results are organized in a logical progression that mirrors the analytical pipeline:
+The results are organized in a logical progression that mirrors the analytical pipeline, as follows:
 - *Hierarchical Clustering Results* presents the resistance phenotype clusters identified through hierarchical agglomerative clustering
 - *Cluster Validation and Statistical Performance* evaluates the statistical validity of the clustering solution using silhouette analysis and PCA
 - *Co-resistance Pattern Analysis* examines co-resistance patterns and network relationships
