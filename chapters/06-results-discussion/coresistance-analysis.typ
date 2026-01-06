@@ -26,7 +26,7 @@ Network analysis revealed hub antibiotics with high connectivity, indicating the
 
 Key findings from the network topology:
 - *Ampicillin* exhibited the highest degree centrality, connecting to 8 other resistance phenotypes
-- Fluoroquinolone resistance (ciprofloxacin, levofloxacin) formed a tightly connected subnetwork
+- Fluoroquinolone resistance (enrofloxacin, marbofloxacin) formed a tightly connected subnetwork
 
 === Clinical Implications
 

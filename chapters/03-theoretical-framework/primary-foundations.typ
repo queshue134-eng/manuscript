@@ -4,7 +4,7 @@
 
 === Pattern Recognition Theory
 
-The primary theoretical foundation of this study is *Pattern Recognition Theory*, as formalized by Duda, Hart, and Stork  in their seminal work _Pattern Classification_. Pattern recognition is defined as the automatic discovery of regularities in data through the use of computational algorithms, with the aim of classifying or describing observations based on learned representations rather than explicit rules.
+The primary theoretical foundation of this study is *Pattern Recognition Theory*, as formalized by Duda, Hart, and Stork @duda2001pattern in their seminal work _Pattern Classification_. Pattern recognition is defined as the automatic discovery of regularities in data through the use of computational algorithms, with the aim of classifying or describing observations based on learned representations rather than explicit rules.
 
 This theory is operationalized in the present study through the integration of *unsupervised* and *supervised* learning paradigms:
 
@@ -13,17 +13,17 @@ This theory is operationalized in the present study through the integration of *
     columns: 3,
     table.header[*Paradigm*][*Theoretical Basis*][*Application in Study*],
     [*Unsupervised Learning*],
-    [Cluster Analysis Theory ],
+    [Cluster Analysis Theory @jain1988algorithms],
     [Hierarchical Agglomerative Clustering discovers latent resistance structures without predefined labels],
 
     [*Supervised Learning*],
-    [Statistical Learning Theory ],
+    [Statistical Learning Theory @hastie2009elements],
     [Logistic Regression, Random Forest, and k-Nearest Neighbors validate discriminative capacity of discovered patterns],
   ),
   caption: [Learning Paradigms in Pattern Recognition],
 ) <tab:learning-paradigms>
 
-The theoretical justification for combining both paradigms derives from the *cluster validation problem* articulated by Jain and Dubes : unsupervised methods alone cannot guarantee that discovered structures are meaningful, coherent, or reproducible. Supervised validation provides an external mechanism for assessing whether clusters represent genuinely separable phenotypic categories.
+The theoretical justification for combining both paradigms derives from the *cluster validation problem* articulated by Jain and Dubes @jain1988algorithms: unsupervised methods alone cannot guarantee that discovered structures are meaningful, coherent, or reproducible. Supervised validation provides an external mechanism for assessing whether clusters represent genuinely separable phenotypic categories.
 
 ==== Hierarchical Clustering Theory
 

@@ -58,7 +58,7 @@ The foregoing review reveals a critical methodological gap at the intersection o
     // Current study row (highlighted)
     table.cell(fill: rgb("#d4edda"))[*Current Study*],
     table.cell(fill: rgb("#d4edda"))[*Pattern Recognition of AMR*],
-    table.cell(fill: rgb("#d4edda"))[*2024*],
+    table.cell(fill: rgb("#d4edda"))[*2026*],
     table.cell(fill: rgb("#d4edda"))[*Yes*],
     table.cell(fill: rgb("#d4edda"))[*Yes*],
     table.cell(fill: rgb("#d4edda"))[*Water-fish-human nexus*],

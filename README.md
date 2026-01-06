@@ -44,7 +44,7 @@ This thesis investigates antimicrobial resistance patterns in 491 bacterial isol
 - **PCA** for dimensionality reduction (61.2% variance explained with 4 components)
 - **4 distinct resistance clusters** identified (k=4)
 - **Silhouette score**: 0.466
-- **Random Forest validation**: 92% accuracy
+- **Random Forest validation**: 99.0% accuracy (macro F1 = 0.96)
 
 ## 🚀 Compilation
 

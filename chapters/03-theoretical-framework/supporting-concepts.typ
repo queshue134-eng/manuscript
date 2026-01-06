@@ -4,7 +4,7 @@
 
 === Information Leakage Theory in Machine Learning
 
-A critical supporting concept is *Information Leakage Theory*, which addresses the methodological risk of inadvertently incorporating information from test data into model training, leading to overoptimistic performance estimates . Leakage violates the fundamental assumption of independent and identically distributed (i.i.d.) training and evaluation sets.
+A critical supporting concept is *Information Leakage Theory*, which addresses the methodological risk of inadvertently incorporating information from test data into model training, leading to overoptimistic performance estimates @kaufman2012leakage. Leakage violates the fundamental assumption of independent and identically distributed (i.i.d.) training and evaluation sets.
 
 The study operationalizes leakage prevention through two architectural constraints derived from this theory:
 
@@ -24,13 +24,13 @@ The study operationalizes leakage prevention through two architectural constrain
   caption: [Leakage Types and Architectural Mitigations],
 ) <tab:leakage-types>
 
-These constraints are not merely procedural but reflect the theoretical requirement that evaluation metrics must estimate generalization error on truly unseen data .
+These constraints are not merely procedural but reflect the theoretical requirement that evaluation metrics must estimate generalization error on truly unseen data.
 
 === Ordinal Data Representation Theory
 
-The encoding of antimicrobial susceptibility results (Susceptible/Intermediate/Resistant) as ordinal numerical values (0/1/2) is grounded in *Ordinal Data Theory* . Ordinal variables possess natural ordering but lack equidistant intervals between categories.
+The encoding of antimicrobial susceptibility results (Susceptible/Intermediate/Resistant) as ordinal numerical values (0/1/2) is grounded in *Ordinal Data Theory* @stevens1946theory. Ordinal variables possess natural ordering but lack equidistant intervals between categories.
 
-The choice of Euclidean distance for clustering ordinal resistance data is justified by research demonstrating that, for low-dimensional ordinal spaces with consistent encoding, Euclidean distance approximates ordinal dissimilarity with acceptable distortion . Alternative distance metrics (e.g., Gower distance, Manhattan distance) were considered; the study's stability analysis using Adjusted Rand Index (ARI) across alternative configurations validates the robustness of the Euclidean-based solution.
+The choice of Euclidean distance for clustering ordinal resistance data is justified by research demonstrating that, for low-dimensional ordinal spaces with consistent encoding, Euclidean distance approximates ordinal dissimilarity with acceptable distortion @podani1999extending. Alternative distance metrics (e.g., Gower distance, Manhattan distance) were considered; the study's stability analysis using Adjusted Rand Index (ARI) across alternative configurations validates the robustness of the Euclidean-based solution.
 
 === Multi-Drug Resistance Classification Theory
 

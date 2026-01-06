@@ -8,7 +8,7 @@ This study encompasses the following:
 
 + *Data Source*: Antimicrobial susceptibility testing (AST) data from 491 bacterial isolates collected through the INOHAC AMR Project Two across three Philippine regions: BARMM, Central Luzon (Region III), and Eastern Visayas (Region VIII).
 
-+ *Organisms*: Gram-negative Enterobacteriaceae including _Escherichia coli_, _Klebsiella pneumoniae_, _Enterobacter_ species, and _Salmonella_ species isolated from water, fish, and hospital sources.
++ *Organisms*: Members of the family Enterobacteriaceae including _Escherichia coli_, _Klebsiella pneumoniae_, _Enterobacter_ species, and _Salmonella_ species isolated from water, fish, and hospital sources.
 
 + *Antibiotics*: A panel of 22 antibiotics spanning major classes including penicillins, cephalosporins, aminoglycosides, fluoroquinolones, tetracyclines, and carbapenems, as tested according to Clinical and Laboratory Standards Institute (CLSI) guidelines.
 
@@ -18,7 +18,7 @@ This study encompasses the following:
 
 === Limitations
 
-+ *Phenotypic Focus*: This study analyzes phenotypic resistance profiles (susceptible/intermediate/resistant) without genotypic characterization. Resistance mechanisms and mobile genetic elements are inferred but not directly confirmed.
++ *Phenotypic Focus*: This study analyzes phenotypic resistance profiles (susceptible/intermediate/resistant) without genotypic characterization. Resistance mechanisms and mobile genetic elements are hypothesized but not directly confirmed.
 
 + *Retrospective Design*: Analysis was conducted on historical AST data, precluding prospective validation or temporal trend analysis.
 

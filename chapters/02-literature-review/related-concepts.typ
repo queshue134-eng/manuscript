@@ -13,7 +13,7 @@ The fundamental challenge in environmental AMR surveillance lies in the absence 
 
 Hierarchical clustering constructs a tree-like structure (dendrogram) that groups similar observations based on distance metrics, progressively merging clusters until a single root encompasses all data points @ward1963hierarchical. Among linkage methods, Ward's minimum variance approach minimizes within-cluster sum of squares at each merge step, producing compact, spherical clusters that often correspond to biologically meaningful groupings.
 
-The choice of distance metric fundamentally shapes cluster geometry. Euclidean distance remains standard for continuous data and is required for Ward's method. While the ordinal nature of resistance encoding (Susceptible = 0, Intermediate = 0.5, Resistant = 1) introduces theoretical ambiguity, empirical evaluations demonstrate robust clustering performance with ordinal resistance data @abada2025ward.
+The choice of distance metric fundamentally shapes cluster geometry. Euclidean distance remains standard for continuous data and is required for Ward's method. While the ordinal nature of resistance encoding (Susceptible = 0, Intermediate = 1, Resistant = 2) introduces theoretical ambiguity, empirical evaluations demonstrate robust clustering performance with ordinal resistance data @abada2025ward.
 
 ==== Principal Component Analysis for Dimensionality Reduction
 
@@ -23,7 +23,7 @@ In AMR research, PCA serves dual purposes: enabling two-dimensional visualizatio
 
 ==== Cluster Validation via Silhouette Analysis
 
-Determining optimal cluster number remains a persistent challenge in unsupervised learning @hastie2017elements. The silhouette coefficient addresses this by measuring the ratio of within-cluster cohesion to between-cluster separation @rousseeuw1987silhouette. Values range from -1 to +1, where scores above 0.5 indicate reasonable cluster structure and scores exceeding 0.7 suggest convincing groupings @shahapure2020silhouette.
+Determining optimal cluster number remains a persistent challenge in unsupervised learning @hastie2017elements. The silhouette coefficient addresses this by measuring the ratio of within-cluster cohesion to between-cluster separation @rousseeuw1987silhouette. Values range from -1 to +1, where scores ≥ 0.25 indicate weak structure, scores ≥ 0.40 indicate moderate-to-strong structure suitable for biological phenotype analysis, and scores ≥ 0.70 suggest exceptionally well-defined groupings @shahapure2020silhouette @jeon2025measuring.
 
 This internal validation evaluates whether data genuinely contain clusterable structure at a given resolution. For AMR phenotyping, high silhouette scores indicate that isolates partition into distinct resistance archetypes rather than forming a continuous spectrum.
 

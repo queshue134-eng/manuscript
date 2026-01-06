@@ -28,8 +28,8 @@
 
     #v(0.3cm)
 
-    *Author 1* \
-    *Author 2*
+    *Al-Hanif A. Magomnang* \
+    *Reynaldo A. Pahay Jr.*
 
     #v(1cm)
 

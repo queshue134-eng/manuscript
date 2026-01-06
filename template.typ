@@ -81,11 +81,18 @@
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
     v(0.4in)
-    align(center)[
-      #text(weight: "bold", size: 14pt)[CHAPTER #counter(heading).display("1")]
-      #v(0.1in)
-      #text(weight: "bold", size: 14pt)[#upper(it.body)]
-    ]
+    // Check if this is the References heading (from bibliography)
+    if it.body == [References] {
+      align(center)[
+        #text(weight: "bold", size: 14pt)[REFERENCES]
+      ]
+    } else {
+      align(center)[
+        #text(weight: "bold", size: 14pt)[CHAPTER #counter(heading).display("1")]
+        #v(0.1in)
+        #text(weight: "bold", size: 14pt)[#upper(it.body)]
+      ]
+    }
     v(0.2in)
   }
 
@@ -117,6 +124,14 @@
 
   // Keep figures and tables together with their captions
   show figure: set block(breakable: false)
+
+  // Add black border to figure images
+  show figure.where(kind: image): it => {
+    block(breakable: false)[
+      #box(stroke: 1pt + black, it.body)
+      #it.caption
+    ]
+  }
 
   // Table captions: above the table, left-aligned, keep together
   show figure.where(kind: table): set figure.caption(position: top)

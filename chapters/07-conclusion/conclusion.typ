@@ -1,7 +1,7 @@
 // Section 7.1: Conclusion
 == Conclusion
 
-This study successfully developed and validated a hybrid unsupervised-supervised machine learning framework for pattern recognition of antimicrobial resistance phenotypes in bacterial isolates from the Philippine water-fish-human nexus. The analysis of 491 isolates collected through the INOHAC AMR Project Two across three regions—BARMM, Central Luzon, and Eastern Visayas—yielded the following conclusions:
+This study developed and validated a hybrid unsupervised-supervised machine learning framework for pattern recognition of antimicrobial resistance phenotypes in bacterial isolates from the Philippine water-fish-human nexus. The analysis of 491 isolates collected through the INOHAC AMR Project Two across three regions—BARMM, Central Luzon, and Eastern Visayas—yielded the following conclusions:
 
 === Objective 1: Resistance Phenotype Identification
 
@@ -17,7 +17,7 @@ Hierarchical agglomerative clustering using Ward's linkage method and Euclidean 
 
 === Objective 2: Cluster Validation
 
-The four-cluster solution achieved a silhouette score of 0.466, indicating moderate cluster structure appropriate for complex biological phenotypes. Supervised validation using Random Forest classification achieved 92% cross-validated accuracy, confirming that cluster assignments represent reproducible, learnable patterns rather than algorithmic artifacts @ardila2025rfsystematic.
+The four-cluster solution achieved a silhouette score of 0.466, indicating moderate cluster structure appropriate for complex biological phenotypes. Supervised validation using Random Forest classification achieved 99.0% test set accuracy (macro F1 = 0.96), confirming that cluster assignments represent reproducible, learnable patterns rather than algorithmic artifacts @ardila2025rfsystematic.
 
 === Objective 3: Spatial and Environmental Patterns
 

@@ -19,9 +19,3 @@ Critically, the One Health Framework also provides epistemic constraints: it emp
 The explicit incorporation of Information Leakage Theory distinguishes this study from naive applications of machine learning to biological data. The Statement of the Problem implicitly acknowledges the risk of methodological artifacts when it notes that unsupervised clustering alone provides "limited assurance" of coherent patterns. Information Leakage Theory provides the conceptual vocabulary for articulating these risks and the design principles for mitigating them.
 
 The Split-Before-Transform protocol and Feature--Metadata Separation are not arbitrary design choices but theoretically mandated safeguards against a recognized class of methodological errors. By grounding these architectural decisions in established theory, the study demonstrates awareness of machine learning pitfalls and implements principled solutions.
-
-=== Why Layered Software Architecture?
-
-The adoption of a *Layered Architectural Style*  responds directly to the Statement of the Problem's identification of an "absence of an integrated framework." Layered architecture is specifically suited to sequential data processing workflows, where each layer transforms inputs and passes outputs to the next layer without circular dependencies.
-
-The three-layer structure (Data Layer → Analysis Layer → Presentation Layer) maps directly onto the methodological progression from preprocessing to pattern discovery to interpretation. This architectural style enforces separation of concerns, preventing the conflation of analytical and interpretive operations that could compromise objectivity.

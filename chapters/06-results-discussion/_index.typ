@@ -6,7 +6,6 @@
 #include "introduction.typ"
 #include "clustering-results.typ"
 #include "validation-results.typ"
-#include "coresistance-analysis.typ"
-#include "regional-patterns.typ"
+#include "statistical-analysis.typ"
 #include "discussion.typ"
 #include "chapter-summary.typ"
